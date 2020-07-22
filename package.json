@@ -16,7 +16,8 @@
     "react-router-dom": "^5.2.0",
     "react-transition-group": "^4.4.1",
     "serve": "^11.3.2",
-    "stylus": "0.54.8"
+    "stylus": "0.54.8",
+    "websocket-extensions": "^0.1.4"
   },
   "scripts": {
     "dev": "react-scripts start",
