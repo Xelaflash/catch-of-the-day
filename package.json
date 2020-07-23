@@ -3,7 +3,19 @@
   "version": "0.0.3",
   "private": false,
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "concurrently": "^5.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "prettier": "^2.0.5",
     "react-scripts": "3.4.1"
   },
   "dependencies": {
@@ -16,8 +28,7 @@
     "react-router-dom": "^5.2.0",
     "react-transition-group": "^4.4.1",
     "serve": "^11.3.2",
-    "stylus": "0.54.8",
-    "websocket-extensions": "^0.1.4"
+    "stylus": "0.54.8"
   },
   "scripts": {
     "dev": "react-scripts start",
