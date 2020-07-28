@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 class Order extends Component {
   render() {
     return (
-      <div className="rien">
-        <p>Heyy</p>
+      <div className="order">
+        <h2>Order</h2>
+        <hr />
       </div>
     );
   }
