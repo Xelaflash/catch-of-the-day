@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Stateless functionnal component can be rendered with a regular js function io full blown react.
 
