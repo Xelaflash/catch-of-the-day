@@ -14,10 +14,24 @@ class App extends Component {
 
   componentDidMount() {
     const { params } = this.props.match;
+    // first reinstate local storage
+    const localStorageRef = localStorage.getItem(params.storeId);
+    console.log(localStorageRef);
+    if (localStorageRef) {
+      this.setState({
+        order: JSON.parse(localStorageRef),
+      });
+    }
     this.ref = base.syncState(`${params.storeId}/fishes`, {
       context: this,
       state: 'fishes',
     });
+  }
+
+  componentDidUpdate() {
+    // console.log(this.state.order);
+    // setItem take a key value pair. here key == storeName & value == the order state
+    localStorage.setItem(this.props.match.params.storeId, JSON.stringify(this.state.order));
   }
 
   // clean memory of firebase when we lea a store
