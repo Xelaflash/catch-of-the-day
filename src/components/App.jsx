@@ -52,6 +52,15 @@ class App extends Component {
     });
   };
 
+  updateFish = (key, updateFish) => {
+    // 1. take a copy of the existing state
+    const fishes = { ...this.state.fishes };
+    // 2. update state
+    fishes[key] = updateFish;
+    // 3. set that change into state
+    this.setState({ fishes });
+  };
+
   // another custom function to update state (here load fishes in inventory component)
   loadSampleFishes = () => {
     this.setState({
@@ -82,7 +91,12 @@ class App extends Component {
           </ul>
         </div>
         <Order fishes={this.state.fishes} order={this.state.order} />
-        <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
+        <Inventory
+          addFish={this.addFish}
+          updateFish={this.updateFish}
+          loadSampleFishes={this.loadSampleFishes}
+          fishes={this.state.fishes}
+        />
       </div>
     );
   }
