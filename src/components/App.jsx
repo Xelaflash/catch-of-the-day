@@ -61,6 +61,15 @@ class App extends Component {
     this.setState({ fishes });
   };
 
+  deleteFish = (key) => {
+    // 1. take a copy of the existing state
+    const fishes = { ...this.state.fishes };
+    // 2. update state, we set the fishes to null in order for firebase to be also updates
+    fishes[key] = null;
+    // 3. set that change into state
+    this.setState({ fishes });
+  };
+
   // another custom function to update state (here load fishes in inventory component)
   loadSampleFishes = () => {
     this.setState({
@@ -79,6 +88,17 @@ class App extends Component {
     });
   };
 
+  deleteFishFromOrder = (key) => {
+    // take copy of state
+    const order = { ...this.state.order };
+    // either remove or update the qty in our order
+    delete order[key];
+    // call setState to update our state object
+    this.setState({
+      order,
+    });
+  };
+
   render() {
     return (
       <div className="catch-of-the-day">
@@ -90,10 +110,11 @@ class App extends Component {
             ))}
           </ul>
         </div>
-        <Order fishes={this.state.fishes} order={this.state.order} />
+        <Order fishes={this.state.fishes} order={this.state.order} deleteFishFromOrder={this.deleteFishFromOrder} />
         <Inventory
           addFish={this.addFish}
           updateFish={this.updateFish}
+          deleteFish={this.deleteFish}
           loadSampleFishes={this.loadSampleFishes}
           fishes={this.state.fishes}
         />
