@@ -1,6 +1,6 @@
 import React from 'react';
-
-// Stateless functionnal component can be rendered with a regular js function io full blown react.
+import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';Stateless functionnal component can be rendered with a regular js function io full blown react.
 
 // (destrutured props)
 const Header = ({ tagline }) => (
@@ -18,6 +18,10 @@ const Header = ({ tagline }) => (
     </h3>
   </header>
 );
+
+Header.propTypes = {
+  tagline: PropTypes.string.isRequired,
+};
 
 // class Header extends Component {
 //   render() {
