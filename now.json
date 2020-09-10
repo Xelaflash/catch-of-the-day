@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": ["cotd"],
+  "alias": "catch-of-the-day.vercel.app",
   "builds": [{ "src": "package.json", "use": "@now/static-build" }],
   "routes": [
     { "src": "^/images/(.*)", "dest": "/images/$1" },
