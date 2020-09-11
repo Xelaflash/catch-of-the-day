@@ -26,7 +26,7 @@ class Order extends Component {
     if (!isAvailable) {
       return (
         <CSSTransition {...transitionOptions}>
-          <li key={key}>Sorry {fish ? fish.name : 'fish'} is no longer available</li>;
+          <li key={key}>Sorry {fish ? fish.name : 'fish'} is no longer available</li>
         </CSSTransition>
       );
     }
