@@ -4,4 +4,4 @@ node_modules/
 .idea
 notes.md
 build/
-.vercel
+.netlify
