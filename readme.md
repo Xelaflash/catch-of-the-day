@@ -3,7 +3,7 @@
 Bases on the the React For Beginners course from Wes Bos <a href="https://ReactForBeginners.com/">Learn React</a>
 
 ## Stack
-React, Webpack, Firebase (DB) and deployed to vercel 
+React, Webpack, Firebase (DB) and deployed to netlify 
 
 ### Visit the Website
-https://catch-of-the-day-beta.vercel.app/
+elegant-kare-732405.netlify.app
